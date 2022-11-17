@@ -1,4 +1,12 @@
+# book.view()
+# book.add()
+# book.view()
+# book.delete()
+# book.edit()
+
 import json, os
+with open('data_.json','w') as f:
+    pass
 class Contact_Book:
     data = {}
     
@@ -15,15 +23,13 @@ class Contact_Book:
         self.data[name]= [newPhone, email] 
 
 book = Contact_Book()
-book.add("John", 9876543210, 'imgood@gmail.com')
-book.add("Johny", 9876543210, 'imgoodagain@gmail.com')
-# book.view()
-# print(book.data)
 book.view()
 
-book.edit('John', 9898989898, 'johnnyIsHere@cmail.com')
-with open('data_.json', 'w') as f:
-    json.dump(book.data, f)
+book.add("Name", 9876543210, "email@gmail.com")
 
 # book.view()
-# book.view()
+print(book.data)
+book.view()
+
+with open('data_.json', 'w') as f:
+    json.dump(book.data, f)
